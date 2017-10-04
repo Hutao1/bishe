@@ -2,6 +2,9 @@
 	margin: 0;
 	padding: 0;
 }
+img{
+	display: block;
+}
 /* header */
 .header{
 	height: 9vh;
@@ -11,66 +14,53 @@
 	font-size: 3vh;
 	line-height: 9vh;
 	text-align: center;
-
+	position: relative;
+}
+#back{
+	position: absolute;
+	top: 2vh;
+	left: 1vh;
 }
 body{
 	font-size: 2vh;
 }
 /* main */
 .main{
-	margin-top:2.7vh;
+	margin-left: 16.7vw;
+	overflow: hidden;
+}
+.main span{
+	width: 20vw;
+	display: inline-block;
+}
+.main img{
+	display: none;
+	margin-bottom: -3px;
 
 }
-	.logo{
-		width: 12vh;
-		height: 12vh;
-		border: 1px solid #000;
-		margin: 0 auto;
-
-	}
-	.login{
-		width: 72vw;
-		margin: 0 auto;
-		margin-top: 7vh;
-
-	}
-		.una{
-			border-bottom: 1px solid #666;
-			padding-bottom: 0.5vh;
-		}
-		#uname,#upwd{
-			height: 2.5vh;
-			width:60vw;
-			text-align: right;
-			font-size:1.5vh;
-			outline: none;
-			border:0;
-		}
-		.up{
-			width: 72vw;
-			margin-top: 6vh;
-			border-bottom: 1px solid #666;
-			padding-bottom: 0.5vh;
-		}
-	#btn{
-		margin: 0 auto;
-		margin-top: 5vh;
-		height: 5vh;
-		width: 72vw;
-		background: #bbbbbb;
-		border-radius: 1.5vh;
-		color: #fff;
-		font-size: 1.5vh;
-		line-height: 5vh;
-		text-align: center;
-	}
-	.footer{
-		width: 72vw;
-		margin: 0 auto;
-		margin-top: 3vh;
-	}
-		.footer a{
-			float: right;
-			font-size: 1.5vh;
-
-		}
+.main div{
+	float: left;
+	margin-top: 8vh;
+}
+.main div p{
+	display: inline-block;
+	padding-bottom: 1.5vh;
+	border-bottom: 1px #666 solid;
+}
+input{
+	text-align: right;
+	width: 50vw;
+	outline: none;
+	border: 0;
+}
+#register{
+	width: 58vw;
+	margin:0 auto;
+	background: orange;
+	height: 5.5vh;
+	line-height: 5.5vh;
+	text-align: center;
+	color: #fff;
+	margin-top: 3vh;
+	border-radius: 1vh;
+}

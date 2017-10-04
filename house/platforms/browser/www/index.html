@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 	<title>登录页</title>
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
@@ -28,9 +29,11 @@
 	function $(id){
 		return document.getElementById(id);
 	}
+	//初始化登录按钮不可按
 	$("btn").disabled = false;
 	var flagn = false;
 	var flagp = false;
+	//用户名栏失去焦点判断
 	$("uname").onblur = function(){
 		if(this.value != ""){
 			flagn = true;
@@ -48,6 +51,7 @@
 		}
 
 	}
+	//密码栏失去焦点判断
 	$("upwd").onblur = function(){
 		if(this.value != ""){
 			flagp = true;
@@ -64,6 +68,7 @@
 			$("btn").disabled = false;
 		}
 	}
+	//完成跳转
 	$("btn").onclick = function(){
 		location.href = "home.html";
 	}
