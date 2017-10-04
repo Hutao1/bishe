@@ -1,0 +1,66 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+img{
+	display: block;
+}
+/* header */
+.header{
+	height: 9vh;
+	margin-top: 3vh;
+	background: #000;
+	color: #fff;
+	font-size: 3vh;
+	line-height: 9vh;
+	text-align: center;
+	position: relative;
+}
+#back{
+	position: absolute;
+	top: 2vh;
+	left: 1vh;
+}
+body{
+	font-size: 2vh;
+}
+/* main */
+.main{
+	margin-left: 16.7vw;
+	overflow: hidden;
+}
+.main span{
+	width: 20vw;
+	display: inline-block;
+}
+.main img{
+	display: none;
+	margin-bottom: -3px;
+
+}
+.main div{
+	float: left;
+	margin-top: 8vh;
+}
+.main div p{
+	display: inline-block;
+	padding-bottom: 1.5vh;
+	border-bottom: 1px #666 solid;
+}
+input{
+	text-align: right;
+	width: 50vw;
+	outline: none;
+	border: 0;
+}
+#register{
+	width: 58vw;
+	margin:0 auto;
+	background: orange;
+	height: 5.5vh;
+	line-height: 5.5vh;
+	text-align: center;
+	color: #fff;
+	margin-top: 3vh;
+	border-radius: 1vh;
+}

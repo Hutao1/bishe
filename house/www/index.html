@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>登录页</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+	<div class="header">登录</div>
+	<div class="main">
+		<div class="logo">
+			
+		</div>
+		<div class="login">
+			<p class="una">
+				<span>账号</span><input type="text" id="uname" placeholder="输入注册的用户名">
+			</p>
+			<p class="up">
+				<span>密码</span><input type="text" id="upwd" placeholder="6-16位字母、数字">
+			</p>
+		</div>
+		<div id="btn">登录</div>
+		<div class="footer"><a href="register.html" id="register">还没有账号？</a></div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	function $(id){
+		return document.getElementById(id);
+	}
+	//初始化登录按钮不可按
+	$("btn").disabled = false;
+	var flagn = false;
+	var flagp = false;
+	//用户名栏失去焦点判断
+	$("uname").onblur = function(){
+		if(this.value != ""){
+			flagn = true;
+			if(flagp == true){
+				$("btn").style.background = "#ff9800";
+				$("btn").disabled = true;	
+			}else{
+				$("btn").style.background = "#bbbbbb";
+				$("btn").disabled = false;	
+			}
+		}else{
+			flagn = false;
+			$("btn").style.background = "#bbbbbb";
+			$("btn").disabled = false;
+		}
+
+	}
+	//密码栏失去焦点判断
+	$("upwd").onblur = function(){
+		if(this.value != ""){
+			flagp = true;
+			if(flagn == true){
+				$("btn").style.background = "#ff9800";
+				$("btn").disabled = true;	
+			}else{
+				$("btn").style.background = "#bbbbbb";
+				$("btn").disabled = false;	
+			}
+		}else{
+			flagp = false;
+			$("btn").style.background = "#bbbbbb";
+			$("btn").disabled = false;
+		}
+	}
+	//完成跳转
+	$("btn").onclick = function(){
+		location.href = "home.html";
+	}
+</script>
