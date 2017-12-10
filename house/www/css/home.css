@@ -104,21 +104,22 @@ body {
     -ms-text-size-adjust: none;
     -o-text-size-adjust: none;
     text-size-adjust: none;
+    overflow: hidden;
 }
 
 /*buycontent*/
-.buycontent dl, .havecontent dl {
+.buycontent dl{
     padding: 0.5vh 0.5vw 1vh 0.5vw;
     overflow: hidden;
     border-bottom: 1px solid #666;
 }
 
-.buycontent dl dt, .havecontent dl dt {
+.buycontent dl dt{
     float: left;
     width: 33.3vw;
 }
 
-.buycontent dl dt img, .havecontent dl dt img {
+.buycontent dl dt img{
     margin: 0 auto;
 }
 
@@ -127,11 +128,11 @@ body {
     width: 65vw;
 }
 
-.buycontent .contenttop, .havecontent .contenttop {
+.buycontent .contenttop{
     font-size: 2vh;
 }
 
-.buycontent .contentbottom, .havecontent .contentbottom {
+.buycontent .contentbottom{
     margin-top: 5vh;
     overflow: hidden;
 }
@@ -143,7 +144,62 @@ body {
     margin-left: 0.5vw;
 }
 
-.buycontent .contentbottom p:nth-child(2), .havecontent .contentbottom p:nth-child(2) {
+.buycontent .contentbottom p:nth-child(2) {
+    float: right;
+    height: 5vh;
+    width: 20vw;
+    background: orange;
+    margin-right: 1vw;
+    color: #fff;
+    text-align: center;
+    line-height: 5vh;
+    font-size: 2.2vh;
+    border-radius: 0.5vw;
+    margin-top: 0.8vh;
+}
+
+.buycontent dl span{
+    height: 0;
+    display: none;
+}
+
+/*havecontent*/
+.havecontent {
+    display: block;
+}
+.havecontent dl {
+    padding: 0.5vh 0.5vw 1vh 0.5vw;
+    overflow: hidden;
+    border-bottom: 1px solid #666;
+}
+.havecontent dl dt {
+    float: left;
+    width: 33.3vw;
+}
+.havecontent dl dd {
+    float: left;
+    width: 63vw;
+}
+
+
+.havecontent .contentbottom p:nth-child(1) {
+    float: left;
+    color: #bbbbbb;
+    font-size: 2.2vh;
+    margin-left: 0.5vw;
+    margin-top: 2vh;
+}
+ .havecontent dl dt img {
+    margin: 0 auto;
+}
+.havecontent .contenttop {
+    font-size: 2vh;
+}
+ .havecontent .contentbottom {
+    margin-top: 5vh;
+    overflow: hidden;
+}
+ .havecontent .contentbottom p:nth-child(2) {
     float: right;
     height: 5vh;
     width: 20vw;
@@ -162,22 +218,9 @@ body {
     display: none;
 }
 
-/*havecontent*/
-.havecontent {
-    display: none;
-}
-
-.havecontent .contentbottom p:nth-child(1) {
-    float: left;
-    color: #bbbbbb;
-    font-size: 2.2vh;
-    margin-left: 0.5vw;
-    margin-top: 2vh;
-}
-
 /*mycontent*/
 .mycontent {
-    display: none;
+    display: block;
 }
 
 .usermessage {
