@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            display: block;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        .header{
+            height: 9%;
+            width: 100%;
+            background-color:#000 ;
+            position: relative;
+        }
+        .back{
+            position: absolute;
+            left: 2%;
+            top:50%;
+            margin-top: -20px;
+        }
+        .header>span{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            font-size: 20px;
+            font-weight: bold;
+            color:#fff;
+        }
+        .list dl{
+            padding: 0.5vh 0.5vw 1vh 0.5vw;
+            overflow: hidden;
+            border-bottom: 1px solid #666;
+        }
+
+        .list dl dt{
+            float: left;
+            width: 33.3vw;
+        }
+
+        .list dl dt img{
+            margin: 0 auto;
+        }
+
+        .list dl dd {
+            float: left;
+            width: 65vw;
+        }
+
+        .list .contenttop{
+            font-size: 2vh;
+        }
+
+        .list .contentbottom {
+            margin-top: 5vh;
+            overflow: hidden;
+        }
+
+        .list .contentbottom p:nth-child(1) {
+            float: right;
+            height: 6vh;
+            width: 22vw;
+            background: #e51c23;
+            margin-right: 1vw;
+            color: #fff;
+            text-align: center;
+            line-height: 6vh;
+            font-size: 2.2vh;
+            border-radius: 0.5vw;
+            margin-top: 0.8vh;
+        }
+
+        .list .contentbottom p:nth-child(2){
+            float: right;
+            height: 6vh;
+            width: 22vw;
+            background: #ff9800;
+            margin-right: 1vw;
+            color: #fff;
+            text-align: center;
+            line-height: 6vh;
+            font-size: 2.2vh;
+            border-radius: 0.5vw;
+            margin-top: 0.8vh;
+        }
+
+        .list dl span {
+            height: 0;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="./img/back.png" alt="" class="back">
+    <span>我的房源</span>
+</div>
+<div class="list">
+    <dl>
+        <dt><img src="img/housedemo.jpg"></dt>
+        <dd>
+            <div class="contenttop">
+                工体三里屯超值一居室居家夜生活皆宜</div>
+            <div class="contentbottom">
+                <p>删除房源</p><p>修改房源</p>
+            </div>
+            <span data-img="housedemo.jpg" data-price="100" data-name="工体三里屯超值一居室居家夜生活皆宜"></span>
+        </dd>
+    </dl>
+</div>
+</body>
+</html>

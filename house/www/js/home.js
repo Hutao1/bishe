@@ -33,4 +33,13 @@ window.onload = function(){
 		mycontent.style.display = "block";
 		header.innerHTML = "个人中心";
 	}
+	var toziliao = document.querySelector(".toziliao");
+	toziliao.onclick = function () {
+		location.href = "./myziliao.html";
+    }
+    var tofangyuan = document.querySelector(".tofangyuan");
+	tofangyuan.onclick = function () {
+		location.href = "./myfangyuan.html"
+    }
+
 }
