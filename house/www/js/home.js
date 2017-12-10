@@ -33,11 +33,11 @@ window.onload = function(){
 		mycontent.style.display = "block";
 		header.innerHTML = "个人中心";
 	}
-	var toziliao = document.querySelector(".toziliao");
+	var toziliao = document.querySelector(".mymessage");
 	toziliao.onclick = function () {
 		location.href = "./myziliao.html";
     }
-    var tofangyuan = document.querySelector(".tofangyuan");
+    var tofangyuan = document.querySelector(".myhouse");
 	tofangyuan.onclick = function () {
 		location.href = "./myfangyuan.html"
     }
