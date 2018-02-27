@@ -8,13 +8,17 @@ window.onload = function(){
     var header = document.querySelector("#header");
     var tofangyuan = document.querySelector("#myhouse");
     var mymessage = document.querySelector("#mymessage")
-
+    var fabu = document.querySelector("#fabu");
 
     mymessage.onclick = function () {
         location.href = "myziliao.html"
     }
     tofangyuan.onclick = function () {
         location.href="myfangyuan.html"
+    }
+    fabu.onclick = function(){
+        location.href = "fabu.html"
+        // header.innerHTML = "发布房源";
     }
     buy.onclick = function(){
         location.href = "home.html"

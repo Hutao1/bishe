@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布房源</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            display: block;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+
+        .header{
+            height: 9%;
+            width: 100%;
+            background-color:#000 ;
+            position: relative;
+        }
+        .back{
+            position: absolute;
+            left: 2%;
+            top:50%;
+            margin-top: -20px;
+        }
+        .header>span{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            font-size: 20px;
+            font-weight: bold;
+            color:#fff;
+        }
+        .list{
+            height:4.2%;
+            border-bottom:1px solid #666;
+            margin-top: 5%;
+            color: #bbbbbb;
+        }
+        .list>span:nth-child(1){
+            float: left;
+            margin-left: 5px;
+        }
+        .list>span:nth-child(2){
+            float: right;
+            margin-right: 6px;
+        }
+        .list>span>img{
+            width: 25px;
+            height: 25px;
+        }
+        .upImg{
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+        .up{
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="./img/back.png" alt="" class="back">
+        <span>发布房源</span>
+    </div>
+    <div class="up list">上传图片
+        <input type="file" class="upImg" style="font-size: 0.5rem;opacity: 0">
+    </div>
+    <div class="user list"><span>用户名</span><span>wangyonggui123</span></div>
+    <div class="truename list" ><span>真实姓名</span><span>王永龟</span></div>
+    <div class="card list"><span>身份证</span><span>3307******234</span></div>
+    <div class="tel list"><span>手机号</span><span>178****1234</span></div>
+    <div class="change list"><span>修改密码</span><span><img src="./img/jiantou.png" alt=""></span></div>
+</body>
+</html>
+<script>
+var upImg = document.querySelector(".upImg");
+var back = document.querySelector(".back");
+back.onclick = function () {
+    history.go(-1);
+}
+console.log(upImg)
+</script>
