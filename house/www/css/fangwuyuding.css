@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 23px;
+}
+img{
+    display: block;
+}
+.head{
+    height: 110px;
+    font-size: 45px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    background: #000;
+    line-height: 110px;
+}
+.back{
+    position: absolute;
+    left: 2%;
+    top:50%;
+    margin-top: -20px;
+}
+.demo{
+    width: 100%;
+}
+.top{
+    font-size: 40px;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.descript{
+    color: #dddddd;
+    padding: 0 20px;
+}

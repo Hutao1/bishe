@@ -108,6 +108,14 @@ body {
 }
 
 /*buycontent*/
+.sousuo{
+    width: 95%;
+    height: 6vh;
+    margin: 0.5vh 3vw 1vh 3vw;
+    display: block;
+    background: url("../img/sousuo.png") no-repeat right center;
+    background-size: 5vh 5vh;
+}
 .buycontent dl{
     padding: 0.5vh 0.5vw 1vh 0.5vw;
     overflow: hidden;

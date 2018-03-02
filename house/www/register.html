@@ -30,16 +30,15 @@
 	<div id="register">注册</div>
 </body>
 </html>
+<script src="js/jquery.min.js"></script>
 <script type="text/javascript">
-	function $(id){
-		return document.getElementById(id);
-	}
+	//111.231.105.142/house/user/regist.json?username=1&password=1&realName=1&idcard=1&phone=1
 	//返回处理（返回上一页）
-	$('back').onclick = function(){
+    document.getElementById('back').onclick = function(){
 		history.go(-1);
 	}
 	var fna=false,fpw=false,fmi=false,fca=false,fte=false;
-	$("uname").onblur = function(){
+    document.getElementById("uname").onblur = function(){
 		var reg = /^\w{6,16}$/;
 		if(reg.test(this.value)){
 			fna = true;
@@ -49,7 +48,7 @@
 			this.parentNode.nextElementSibling.style.display = "inline-block";
 		}
 	}
-	$("upwd").onblur = function(){
+    document.getElementById("upwd").onblur = function(){
 		var reg = /^\w{6,16}$/;
 		if(reg.test(this.value)){
 			fpw = true;
@@ -59,7 +58,7 @@
 			this.parentNode.nextElementSibling.style.display = "inline-block";
 		}
 	}
-	$("uming").onblur = function(){
+    document.getElementById("uming").onblur = function(){
 		var reg = /^.{2,10}$/;
 		if(reg.test(this.value)){
 			fmi = true;
@@ -69,7 +68,7 @@
 			this.parentNode.nextElementSibling.style.display = "inline-block";
 		}
 	}
-	$("ucard").onblur = function(){
+    document.getElementById("ucard").onblur = function(){
 		var reg = /^\d{17}(X|x|\d)$/;
 		if(reg.test(this.value)){
 			fca = true;
@@ -79,7 +78,7 @@
 			this.parentNode.nextElementSibling.style.display = "inline-block";
 		}
 	}
-	$("utel").onblur = function(){
+    document.getElementById("utel").onblur = function(){
 		var reg = /^\d{11}$/;
 		if(reg.test(this.value)){
 			fte = true;
@@ -90,9 +89,24 @@
 		}
 	}
 	//注册成功
-	$("register").onclick = function(){
+    document.getElementById("register").onclick = function(){
 		if(fna&&fpw&&fmi&&fca&&fte){
-			location.href = "index.html";
+		    //username=1&password=1&realName=1&idcard=1&phone=1
+			var username = document.getElementById("uname").value;
+			var password = document.getElementById("upwd").value;
+			var realName = document.getElementById("uming").value;
+			var idcard = document.getElementById("ucard").value;
+			var phone = document.getElementById("utel").value;
+			var str= `username=${username}&password=${password}&realName=${realName}&idcard=${idcard}&phone=${phone}`
+			$.ajax({
+				url:"http://111.231.105.142/House/house/user/regist.json",
+				data:str,
+				dataType:"get",
+				success:function (msg) {
+					console.log(msg)
+					location.href = "index.html";
+                }
+			})
 		}
 	}
 </script>
