@@ -6,7 +6,7 @@ window.onload = function(){
 
     var my = document.querySelector(".my");
     var header = document.querySelector("#header");
-
+    var xiangqing = document.querySelector(".xiangqing")
 
 
     buy.onclick = function(){
@@ -22,7 +22,9 @@ window.onload = function(){
         location.href = "home3.html"
         // header.innerHTML = "个人中心";
     }
-
+    xiangqing.onclick = function () {
+        location.href = "xiangqing.html"
+    }
 
 
 }
