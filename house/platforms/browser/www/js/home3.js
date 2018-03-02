@@ -9,6 +9,7 @@ window.onload = function(){
     var tofangyuan = document.querySelector("#myhouse");
     var mymessage = document.querySelector("#mymessage")
     var fabu = document.querySelector("#fabu");
+    var  mymark = document.querySelector(".mymark")
 
     mymessage.onclick = function () {
         location.href = "myziliao.html"
@@ -33,7 +34,9 @@ window.onload = function(){
         location.href = "home3.html"
         // header.innerHTML = "个人中心";
     }
-
+    mymark.onclick = function () {
+        location.href = "soucang.html"
+    }
 
 
 }

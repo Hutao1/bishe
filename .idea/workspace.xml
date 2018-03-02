@@ -5,24 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7455c882-9c54-407a-a6cd-14c5af4aa964" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/house/www/css/calendar.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/house/www/css/xiangqing.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/house/www/img/shoucang_false.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/house/www/img/shoucang_true.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/house/www/js/calendar-jquery.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/house/www/js/calendar.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/house/www/js/xiangqing.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/house/www/xiangqing.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/house/www/css/soucang.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/house/www/js/soucang.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/house/www/soucang.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/house/platforms/browser/www/fangwuyuding.html" afterPath="$PROJECT_DIR$/house/platforms/browser/www/fangwuyuding.html" />
-      <change beforePath="$PROJECT_DIR$/house/platforms/browser/www/home2.html" afterPath="$PROJECT_DIR$/house/platforms/browser/www/home2.html" />
-      <change beforePath="$PROJECT_DIR$/house/platforms/browser/www/js/home2.js" afterPath="$PROJECT_DIR$/house/platforms/browser/www/js/home2.js" />
-      <change beforePath="$PROJECT_DIR$/house/www/css/fangwuyuding.css" afterPath="$PROJECT_DIR$/house/www/css/fangwuyuding.css" />
-      <change beforePath="$PROJECT_DIR$/house/www/fangwuyuding.html" afterPath="$PROJECT_DIR$/house/www/fangwuyuding.html" />
-      <change beforePath="$PROJECT_DIR$/house/www/home2.html" afterPath="$PROJECT_DIR$/house/www/home2.html" />
-      <change beforePath="$PROJECT_DIR$/house/www/js/fangwuyuding.js" afterPath="$PROJECT_DIR$/house/www/js/fangwuyuding.js" />
-      <change beforePath="$PROJECT_DIR$/house/www/js/home2.js" afterPath="$PROJECT_DIR$/house/www/js/home2.js" />
+      <change beforePath="$PROJECT_DIR$/house/platforms/browser/www/js/home3.js" afterPath="$PROJECT_DIR$/house/platforms/browser/www/js/home3.js" />
+      <change beforePath="$PROJECT_DIR$/house/platforms/browser/www/xiangqing.html" afterPath="$PROJECT_DIR$/house/platforms/browser/www/xiangqing.html" />
+      <change beforePath="$PROJECT_DIR$/house/www/js/home3.js" afterPath="$PROJECT_DIR$/house/www/js/home3.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,31 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/house/www/home.html">
+      <file leaf-file-name="home3.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/house/www/home3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="33" column="41" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/house/www/home2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-184">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/house/www/css/home.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="216" column="23" lean-forward="true" selection-start-line="216" selection-start-column="23" selection-end-line="216" selection-end-column="23" />
+            <state relative-caret-position="138">
+              <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -69,18 +38,8 @@
       <file leaf-file-name="xiangqing.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/house/www/js/xiangqing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/house/www/js/home2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -89,18 +48,58 @@
       <file leaf-file-name="xiangqing.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/house/www/xiangqing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="33" />
+            <state relative-caret-position="133">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="22" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xiangqing.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="xiangqing.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/house/www/css/xiangqing.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="116" column="16" lean-forward="false" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="16" />
+            <state relative-caret-position="331">
+              <caret line="93" column="1" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="93" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home3.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/house/www/js/home3.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="soucang.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/house/www/soucang.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="17" column="84" lean-forward="false" selection-start-line="17" selection-start-column="84" selection-end-line="17" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="soucang.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/house/www/css/soucang.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="676">
+              <caret line="99" column="20" lean-forward="false" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="soucang.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/house/www/js/soucang.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -142,9 +141,13 @@
         <option value="$PROJECT_DIR$/house/www/css/fangwuyuding.css" />
         <option value="$PROJECT_DIR$/house/www/home2.html" />
         <option value="$PROJECT_DIR$/house/www/js/home2.js" />
-        <option value="$PROJECT_DIR$/house/www/js/xiangqing.js" />
         <option value="$PROJECT_DIR$/house/www/xiangqing.html" />
         <option value="$PROJECT_DIR$/house/www/css/xiangqing.css" />
+        <option value="$PROJECT_DIR$/house/www/js/home3.js" />
+        <option value="$PROJECT_DIR$/house/www/js/xiangqing.js" />
+        <option value="$PROJECT_DIR$/house/www/js/soucang.js" />
+        <option value="$PROJECT_DIR$/house/www/soucang.html" />
+        <option value="$PROJECT_DIR$/house/www/css/soucang.css" />
       </list>
     </option>
   </component>
@@ -271,12 +274,12 @@
       <option name="presentableId" value="Default" />
       <updated>1519744734584</updated>
       <workItem from="1519744735824" duration="2301000" />
-      <workItem from="1519989860394" duration="15367000" />
+      <workItem from="1519989860394" duration="16383000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17668000" />
+    <option name="totallyTimeSpent" value="18684000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="423" y="9" width="1400" height="1000" extended-state="0" />
@@ -412,14 +415,14 @@
         <state relative-caret-position="230">
           <caret line="10" column="62" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="62" />
           <folding>
-            <element signature="e#610#616#0" expanded="true" />
-            <element signature="e#616#622#0" expanded="true" />
-            <element signature="e#759#765#0" expanded="true" />
-            <element signature="e#765#771#0" expanded="true" />
-            <element signature="e#771#777#0" expanded="true" />
-            <element signature="e#846#852#0" expanded="true" />
-            <element signature="e#852#858#0" expanded="true" />
-            <element signature="e#858#864#0" expanded="true" />
+            <element signature="e#610#616#0" expanded="false" />
+            <element signature="e#616#622#0" expanded="false" />
+            <element signature="e#759#765#0" expanded="false" />
+            <element signature="e#765#771#0" expanded="false" />
+            <element signature="e#771#777#0" expanded="false" />
+            <element signature="e#846#852#0" expanded="false" />
+            <element signature="e#852#858#0" expanded="false" />
+            <element signature="e#858#864#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -448,14 +451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/house/www/js/xiangqing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/house/www/js/home2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -466,24 +461,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/house/www/home2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
+        <state relative-caret-position="-304">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/www/js/xiangqing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/www/js/soucang.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/www/js/home3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/www/home3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/house/www/xiangqing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="33" />
+        <state relative-caret-position="133">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="22" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/house/www/css/xiangqing.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="116" column="16" lean-forward="false" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="16" />
+        <state relative-caret-position="331">
+          <caret line="93" column="1" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="93" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/www/soucang.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="84" lean-forward="false" selection-start-line="17" selection-start-column="84" selection-end-line="17" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/www/css/soucang.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="99" column="20" lean-forward="false" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
           <folding />
         </state>
       </provider>
