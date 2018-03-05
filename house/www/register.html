@@ -99,13 +99,17 @@
 			var phone = document.getElementById("utel").value;
 			var str= `username=${username}&password=${password}&realName=${realName}&idcard=${idcard}&phone=${phone}`
 			$.ajax({
-				url:"http://111.231.105.142/House/house/user/regist.json",
+				url:"http://111.231.105.142:8080/House/rest/house/user/regist.json",
 				data:str,
-				dataType:"get",
-				success:function (msg) {
-					console.log(msg)
-					location.href = "index.html";
-                }
+				method:"get",
+                success:function(data,textStatus,jqXHR){
+                    console.log('成功')
+                    if(data.stateCode == 0){
+                        location.href = "index.html";
+                    }
+                    // location.href = "index.html"
+                },
+				
 			})
 		}
 	}

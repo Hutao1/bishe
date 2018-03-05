@@ -25,51 +25,65 @@
 	</div>
 </body>
 </html>
+<script src="js/jquery.min.js"></script>
 <script type="text/javascript">
-	function $(id){
-		return document.getElementById(id);
-	}
 	//初始化登录按钮不可按
 	$("btn").disabled = false;
 	var flagn = false;
 	var flagp = false;
 	//用户名栏失去焦点判断
-	$("uname").onblur = function(){
+    document.getElementById("uname").onblur = function(){
 		if(this.value != ""){
 			flagn = true;
 			if(flagp == true){
-				$("btn").style.background = "#ff9800";
-				$("btn").disabled = true;	
+                document.getElementById("btn").style.background = "#ff9800";
+                document.getElementById("btn").disabled = true;
 			}else{
-				$("btn").style.background = "#bbbbbb";
-				$("btn").disabled = false;	
+                document.getElementById("btn").style.background = "#bbbbbb";
+                document.getElementById("btn").disabled = false;
 			}
 		}else{
 			flagn = false;
-			$("btn").style.background = "#bbbbbb";
-			$("btn").disabled = false;
+            document.getElementById("btn").style.background = "#bbbbbb";
+            document.getElementById("btn").disabled = false;
 		}
 
 	}
 	//密码栏失去焦点判断
-	$("upwd").onblur = function(){
+    document.getElementById("upwd").onblur = function(){
 		if(this.value != ""){
 			flagp = true;
 			if(flagn == true){
-				$("btn").style.background = "#ff9800";
-				$("btn").disabled = true;	
+                document.getElementById("btn").style.background = "#ff9800";
+                document.getElementById("btn").disabled = true;
 			}else{
-				$("btn").style.background = "#bbbbbb";
-				$("btn").disabled = false;	
+                document.getElementById("btn").style.background = "#bbbbbb";
+                document.getElementById("btn").disabled = false;
 			}
 		}else{
 			flagp = false;
-			$("btn").style.background = "#bbbbbb";
-			$("btn").disabled = false;
+            document.getElementById("btn").style.background = "#bbbbbb";
+            document.getElementById("btn").disabled = false;
 		}
 	}
 	//完成跳转
-	$("btn").onclick = function(){
-		location.href = "home.html";
+    document.getElementById("btn").onclick = function(){
+        var  str = `username=${$("#uname").val()}&password=${$("#upwd").val()}`;
+        console.log(flagn,flagp)
+	    if(flagn && flagp){
+            $.ajax({
+                url:"http://111.231.105.142:8080/House/rest/house/user/login.json",
+                data:str,
+                method:"get",
+                success:function(data,textStatus,jqXHR){
+                    if(data.stateCode == 0){
+                        location.href = "home.html";
+					}
+                    // location.href = "index.html"
+                },
+
+            })
+		}
+		// location.href = "home.html";
 	}
 </script>
