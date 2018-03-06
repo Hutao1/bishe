@@ -67,3 +67,18 @@
 </div>
 </body>
 </html>
+<script>
+	$(function () {
+        $.ajax({
+            url:"http://111.231.105.142:8080/House/rest/house/list/houseList.json",
+            method:"get",
+            success:function(res){
+                if(res.stateCode == 0){
+                    console.log(res)
+                }
+                // location.href = "index.html"
+            },
+
+        })
+    })
+</script>

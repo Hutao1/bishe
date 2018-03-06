@@ -45,13 +45,14 @@
             margin-top: 5%;
             color: #bbbbbb;
         }
-        .list>span:nth-child(1){
-            float: left;
-            margin-left: 5px;
+        .list>span{
+           display: inline-block;
+            width: 30%;
+            margin-left: 20px;
         }
-        .list>span:nth-child(2){
-            float: right;
-            margin-right: 6px;
+        .list>input{
+            width: 50%;
+            text-align: right;
         }
         .list>span>img{
             width: 25px;
@@ -66,6 +67,20 @@
         .up{
             position: relative;
         }
+        input{
+            border: 0;
+        }
+        .btn{
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            font-size: 30px;
+            height: 60px;
+            line-height: 60px;
+            width: 100%;
+            background: orange;
+            color: white;
+        }
     </style>
 </head>
 
@@ -74,22 +89,42 @@
         <img src="./img/back.png" alt="" class="back">
         <span>发布房源</span>
     </div>
-    <div class="up list">上传图片
+    <div class="up list"><span>上传图片</span>
         <input type="file" class="upImg" style="font-size: 0.5rem;opacity: 0">
     </div>
-    <div class="user list"><span>用户名</span><span>wangyonggui123</span></div>
-    <div class="truename list" ><span>真实姓名</span><span>王永龟</span></div>
-    <div class="card list"><span>身份证</span><span>3307******234</span></div>
-    <div class="tel list"><span>手机号</span><span>178****1234</span></div>
-    <div class="change list"><span>修改密码</span><span><img src="./img/jiantou.png" alt=""></span></div>
+    <div class="list"><span>房源名称</span><input type="text" placeholder="点击输入" class="houseName"></div>
+    <div class="list" ><span>房源详情</span><input type="text" placeholder="点击输入" class="houseDetail"></div>
+    <div class="list"><span>地址</span><input type="text" placeholder="点击输入" class="houseAddress"></div>
+    <div class="list"><span>价格(元/天)</span><input type="text" placeholder="点击输入" class="housePrice"></div>
+    <div class="btn">确认发布</div>
 </body>
 </html>
+<script src="js/jquery.min.js"></script>
 <script>
 var upImg = document.querySelector(".upImg");
 var back = document.querySelector(".back");
+if(document.cookie.indexOf(";")){
+    var userId = document.cookie.split(";")[0].split("=")[1];
+}else{
+    var userId = document.cookie.split("=")[1];
+}
 back.onclick = function () {
     history.go(-1);
     console.log(111)
 }
-console.log(upImg)
+$(".btn").click(function () {
+    $.ajax({
+        url:"http://111.231.105.142:8080/House/rest/house/user/saveHouse.json",
+        data:"userId="+userId+"&houseName="+$(".houseName").val()+"&houseAddress="+$(".houseAddress").val()+"&housePrice="+$(".housePrice").val()+"&houseDetail="+$(".houseDetail").val(),
+        method:"get",
+        success:function(res){
+            if(res.stateCode == 0){
+                alert("发布成功");
+
+            }else{
+                alert("发布失败");
+            }
+        },
+    })
+})
 </script>

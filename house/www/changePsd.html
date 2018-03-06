@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    img{
+        display: block;
+    }
+    html,body{
+        height: 100%;
+        width: 100%;
+    }
+
+    .header{
+        height: 9%;
+        width: 100%;
+        background-color:#000 ;
+        position: relative;
+        color: #fff;
+    }
+    .header>span{
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        font-size: 20px;
+        font-weight: bold;
+        color:#fff;
+    }
+    .back{
+        position: absolute;
+        left: 2%;
+        top:50%;
+        margin-top: -20px;
+    }
+    p{
+        width: 80%;
+        border-bottom: 1px solid #000;
+        margin: 0  auto;
+        overflow: hidden;
+        padding: 30px 0 ;
+    }
+    p>span{
+        display: inline-block;
+        width: 35%;
+    }
+    input{
+        border: 0;
+        text-align: right;
+        width: 60%;
+    }
+    .btn{
+        width: 80%;
+        background: orange;
+        color: #fff;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 auto;
+        display: block;
+        margin-top:20px ;
+        border: 0;
+    }
+</style>
+<body>
+<div class="header">
+    <img src="./img/back.png" alt="" class="back">
+    <span>修改密码</span>
+</div>
+<p><span>原密码</span><input type="text" placeholder="输入你的原密码" class="ops"></p>
+<p><span>修改密码</span><input type="text" placeholder="6-16位字母、数字" class="nps"></p>
+<p><span>确认密码密码</span><input type="text" placeholder="请再输一次你的修改密码" class="qnps"></p>
+<button class="btn">确认提交</button>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+    $(".btn").click(function () {
+        var npsFlag = /^\w{6,16}$/;
+        if($(".nps").val() !=$(".qnps").val()){
+            alert("两次密码不正确");
+            return;
+        }
+        if(!npsFlag.test($(".nps").val())){
+            alert("修改密码格式不正确");
+            return;
+        }
+        if(document.cookie.indexOf(";")){
+            var userId = document.cookie.split(";")[0].split("=")[1];
+        }else{
+            var userId = document.cookie.split("=")[1];
+        }
+        $.ajax({
+            url:"http://111.231.105.142:8080/House/rest/house/user/updatePassword.json",
+            data:"userId="+userId+"&ops="+$(".ops").val()+"&nps="+$(".nps").val(),
+            method:"get",
+            success:function(res){
+                if(res.stateCode == 0){
+                    alert("修改成功");
+                    $(".ops").val("");
+                    $(".nps").val("")
+                    $(".qnps").val("")
+                }else{
+                    alert("修改失败");
+                }
+
+                // location.href = "index.html"
+            },
+        })
+    })
+</script>

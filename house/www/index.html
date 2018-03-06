@@ -77,13 +77,17 @@
                 method:"get",
                 success:function(data,textStatus,jqXHR){
                     if(data.stateCode == 0){
+                        setCookie("userId",data.userId)
+						console.log(data)
                         location.href = "home.html";
 					}
-                    // location.href = "index.html"
                 },
 
             })
 		}
 		// location.href = "home.html";
 	}
+	function  setCookie(name,value) {
+		document.cookie = name + "=" + value;
+    }
 </script>
