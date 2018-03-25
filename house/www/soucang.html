@@ -34,7 +34,7 @@
         }
         $.ajax({
             url:"http://111.231.105.142:8080/House/rest/house/user/collectHouse.json",
-            method:"get",
+            type:"post",
             data:"userId="+userId,
             success:function(res){
                 if(res.stateCode == 0){

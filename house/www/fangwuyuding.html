@@ -8,31 +8,143 @@
     <link rel="stylesheet" href="css/calendar.css">
 </head>
 <body>
-<div class="head"><img src="img/back.png" alt="" class="back">房屋预定</div>
-<img src="img/housedemo.jpg" alt="" class="demo">
-<p class="top">工体三里屯超值一居室居家夜生活皆宜</p>
-<p class="descript">房子装修极好，有煤气、燃气热水器、42寸液晶电视（1080P，支持HDMI）、有线电视、冰箱、洗衣机、洗碗机，锅碗瓢盆等生活设施齐全。
-<br/>
-    网络：联通10M光纤，网速比50M宽带通、长城宽带等好很多。
-</p>
-<p class="site"><span>地址:&nbsp;&nbsp;</span>北京市朝阳区工体南路5号楼</p>
-<p class="price">￥100/天 <img src="img/shoucang_false.png" alt="" class="soucang"></p>
-<div class="start">租住开始时间:&nbsp;&nbsp;&nbsp;<input type="text" class="calendar" /></div>
-<div class="end">租住结束时间:&nbsp;&nbsp;&nbsp;<input type="text" class="calendar2"/></div>
-<div class="comment">
-    <div class="tip"><span>评论</span></div>
-    <div class="commentcontent">
-        <div class="content">卢本伟牛逼！！</div>
-        <div class="time">发表于2017.09.21</div>
+<div class="all">
+    <div class="head"><img src="img/back.png" alt="" class="back">房屋预定</div>
+    <img src="img/housedemo.jpg" alt="" class="demo">
+    <!--<p class="top">工体三里屯超值一居室居家夜生活皆宜</p>
+    <p class="descript">房子装修极好，有煤气、燃气热水器、42寸液晶电视（1080P，支持HDMI）、有线电视、冰箱、洗衣机、洗碗机，锅碗瓢盆等生活设施齐全。
+    <br/>
+        网络：联通10M光纤，网速比50M宽带通、长城宽带等好很多。
+    </p>
+    <p class="site"><span>地址:&nbsp;&nbsp;</span>北京市朝阳区工体南路5号楼</p>
+    <p class="price">￥100/天 <img src="img/shoucang_false.png" alt="" class="soucang"></p>
+    <div class="start">租住开始时间:&nbsp;&nbsp;&nbsp;<input type="text" class="calendar" /></div>
+    <div class="end">租住结束时间:&nbsp;&nbsp;&nbsp;<input type="text" class="calendar2"/></div>-->
+    <div class="comment">
+        <div class="tip" style="font-size: 40px"><span>评论</span></div>
+        <!--<div class="commentcontent">
+            <div class="content">卢本伟牛逼！！</div>
+            <div class="time">发表于2017.09.21</div>
+        </div>
+        <div class="commentcontent">
+            <div class="content">卢本伟牛逼！！</div>
+            <div class="time">发表于2017.09.21</div>
+        </div>-->
     </div>
-    <div class="commentcontent">
-        <div class="content">卢本伟牛逼！！</div>
-        <div class="time">发表于2017.09.21</div>
-    </div>
+    <div class="yuding">预定</div>
+
 </div>
-<div class="yuding">预定</div>
 </body>
 </html>
 <script src="js/jquery.min.js"></script>
 <script src="js/calendar-jquery.min.js"></script>
-<script src="js/fangwuyuding.js"></script>
+<script src="./js/fangwuyuding.js"></script>
+<script>
+    var houseId = location.href.split("?")[1].split("=")[1];
+    var str = "houseId="+houseId
+    if(document.cookie.indexOf(";")){
+        var userId = document.cookie.split(";")[0].split("=")[1];
+    }else{
+        var userId = document.cookie.split("=")[1];
+    }
+    $.ajax({
+        url:"http://111.231.105.142:8080/House/rest/house/reserve/houseDetails.json",
+        data:str,
+        type:"post",
+        contentType:"application/x-www-form-urlencoded;charset=UTF-8",
+        success:function(res){
+            if(res.stateCode == 0){
+                console.log(res)
+                var str = `<p class="top">${res.houseName}</p>
+                            <p class="descript">${res.houseDetail}
+                            </p>
+                            <p class="site"><span>地址:&nbsp;&nbsp;</span>${res.houseAddress}</p>
+                            <p class="price">￥${res.housePrice}/天 <img src="img/shoucang_false.png" alt="" class="soucang"></p>
+                            <div class="start">租住开始时间:&nbsp;&nbsp;&nbsp;<input type="text" class="calendar" /></div>
+                            <div class="end">租住结束时间:&nbsp;&nbsp;&nbsp;<input type="text" class="calendar2"/></div>
+                        `
+                $(".demo").after($(str));
+                $(".calendar").Calendar();
+                $(".calendar").val(getNowFormatDate());
+
+                $(".calendar2").Calendar();
+                $(".calendar2").val(getNowFormatDate());
+                var comment = "";
+                if(res.list.length != 0){
+                    res.list.forEach((item,index)=>{
+                        comment += `<div class="commentcontent">
+                                        <div class="content">${item.content}</div>
+                                        <div class="time">${timestampToTime(item.date)}</div>
+                                    </div>`
+                    })
+                    $(".comment").append($(comment))
+                }
+
+            }
+
+        },
+
+    })
+    $(".all").on("click",".soucang",function () {
+        console.log(111)
+        if(/_false/.test($(this).attr("src"))){
+            $(this).attr("src","./img/shoucang_true.png");
+            $.ajax({
+                url:"http://111.231.105.142:8080/House/rest/house/user/saveCollect.json",
+                data:`userId=${userId}&houseId=${houseId}`,
+                type:"post",
+                contentType:"application/x-www-form-urlencoded;charset=UTF-8",
+                success:function(res){
+                    if(res.stateCode == 0){
+                        console.log(res)
+                    }
+                    // location.href = "index.html"
+                },
+
+            })
+        }else{
+            $(this).attr("src","./img/shoucang_false.png");
+            $.ajax({
+                url:"http://111.231.105.142:8080/House/rest/house/user/cancelCollect.json",
+                data:`userId=${userId}&houseId=${houseId}`,
+                type:"post",
+                contentType:"application/x-www-form-urlencoded;charset=UTF-8",
+                success:function(res){
+                    if(res.stateCode == 0){
+                        console.log(res)
+                    }
+                    // location.href = "index.html"
+                },
+
+            })
+        }
+        console.log(/_false/.test($(this).attr("src")));
+    });
+    function timestampToTime(timestamp) {
+        var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        Y = date.getFullYear() + '-';
+        M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+        D = date.getDate() + ' ';
+        return Y+M+D;
+    }
+    $(".yuding").click(function () {
+        var sdate = new Date($(".calendar").val()).getTime();
+        var edate = new Date($(".calendar2").val()).getTime();
+        var days = edate - sdate;
+        var day = parseInt(days / (1000 * 60 * 60 * 24))
+        $.ajax({
+            url:"http://111.231.105.142:8080/House/rest/house/order/createOrder.json",
+            data:`userId=${userId}&houseId=${houseId}&dur=${day}&startTime=${new Date($(".calendar").val()).getTime()}&endTime=${new Date($(".calendar2").val()).getTime()}`,
+            type:"get",
+            contentType:"application/x-www-form-urlencoded;charset=UTF-8",
+            success:function(res){
+                if(res.stateCode == 0){
+                    console.log(res)
+                    location.href = "xiangqing.html?houseId="+houseId
+                }
+            },
+
+        })
+    })
+    console.log(new Date().getTime())
+</script>

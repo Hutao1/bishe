@@ -14,19 +14,19 @@
 
 <div id="wrapper">
 	<div id="scroller">
-		<div class="buycontent">
+		<div class="buycontent" style="overflow: auto">
 			<div><input type="text" placeholder="请输入搜索内容" class="sousuo"></div>
-			<dl>
-				<dt><img src="img/housedemo.jpg"></dt>
-				<dd>
-					<div class="contenttop">
-						工体三里屯超值一居室居家夜生活皆宜</div>
-					<div class="contentbottom">
-						<p>￥100元/天</p><p class="yuding">预定</p>
-					</div>
-					<span data-img="housedemo.jpg" data-price="100" data-name="工体三里屯超值一居室居家夜生活皆宜"></span>
-				</dd>
-			</dl>
+			<!--<dl>-->
+				<!--<dt><img src="img/housedemo.jpg"></dt>-->
+				<!--<dd>-->
+					<!--<div class="contenttop">-->
+						<!--工体三里屯超值一居室居家夜生活皆宜</div>-->
+					<!--<div class="contentbottom">-->
+						<!--<p>￥100元/天</p><p class="yuding">预定</p>-->
+					<!--</div>-->
+					<!--<span data-img="housedemo.jpg" data-price="100" data-name="工体三里屯超值一居室居家夜生活皆宜"></span>-->
+				<!--</dd>-->
+			<!--</dl>-->
 			<!-- <dl>
 				<dt><img src="img/housedemo.jpg"></dt>
 				<dd>
@@ -71,15 +71,41 @@
 	$(function () {
         $.ajax({
             url:"http://111.231.105.142:8080/House/rest/house/list/houseList.json",
-            type:"get",
+            type:"post",
             contentType:"application/x-www-form-urlencoded;charset=UTF-8",
             success:function(res){
                 if(res.stateCode == 0){
+                    var str = ""
                     console.log(res)
+					if(res.list.length != 0){
+                        res.list.forEach((item,index)=>{
+
+                            str+=`
+									<dl>
+										<dt><img src="img/housedemo.jpg"></dt>
+										<dd>
+											<div class="contenttop">
+												${item.houseName}</div>
+											<div class="contentbottom">
+												<p>￥${item.price}元/天</p><p class="yuding" data-houseid="${item.houseId}">预定</p>
+											</div>
+											<span data-img="housedemo.jpg" data-price="100" data-name="工体三里屯超值一居室居家夜生活皆宜"></span>
+										</dd>
+									</dl>`
+                        })
+						// $(".sousuo").html($(".sousuo").html()+str)
+						$(".buycontent").append($(str))
+						console.log($(".yuding"))
+					}
+
                 }
                 // location.href = "index.html"
             },
 
+        })
+		$(".buycontent").on("click",".yuding",function (e) {
+			location.href = "fangwuyuding.html?hosueId="+$(this).data("houseid")
+			console.log($(this).data("houseid"))
         })
     })
 </script>

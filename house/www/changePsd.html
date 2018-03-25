@@ -100,7 +100,7 @@
         $.ajax({
             url:"http://111.231.105.142:8080/House/rest/house/user/updatePassword.json",
             data:"userId="+userId+"&ops="+$(".ops").val()+"&nps="+$(".nps").val(),
-            method:"get",
+            type:"post",
             success:function(res){
                 if(res.stateCode == 0){
                     alert("修改成功");
