@@ -71,7 +71,8 @@
 	$(function () {
         $.ajax({
             url:"http://111.231.105.142:8080/House/rest/house/list/houseList.json",
-            method:"get",
+            type:"get",
+            contentType:"application/x-www-form-urlencoded;charset=UTF-8",
             success:function(res){
                 if(res.stateCode == 0){
                     console.log(res)

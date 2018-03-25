@@ -116,11 +116,12 @@ $(".btn").click(function () {
     $.ajax({
         url:"http://111.231.105.142:8080/House/rest/house/user/saveHouse.json",
         data:"userId="+userId+"&houseName="+$(".houseName").val()+"&houseAddress="+$(".houseAddress").val()+"&housePrice="+$(".housePrice").val()+"&houseDetail="+$(".houseDetail").val(),
-        method:"get",
+        type:"get",
+        contentType:"application/x-www-form-urlencoded;charset=UTF-8",
         success:function(res){
             if(res.stateCode == 0){
                 alert("发布成功");
-
+//                location.href ="home.html"
             }else{
                 alert("发布失败");
             }
