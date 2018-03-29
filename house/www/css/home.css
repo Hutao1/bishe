@@ -20,7 +20,7 @@ body, ul, li {
     border: 0;
 }
 body{
-    padding:8vh 0;
+    padding:9vh 0;
 }
 img {
     display: block;
@@ -75,10 +75,12 @@ body {
 }
 
 /*three content*/
-#wrapper,.buycontent{
-    height:80vh;
+#wrapper,.buycontent,.havecontent{
+    height:83vh;
 }
-
+.buycontent,.havecontent{
+    overflow: auto;
+}
 
 /*buycontent*/
 .sousuo{

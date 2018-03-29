@@ -6,7 +6,7 @@
 
     <title></title>
 
-    <script type="text/javascript" src="js/home2.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
     <div id="scroller">
 
         <div class="havecontent">
-            <dl>
+            <!--<dl>
                 <dt><img src="img/housedemo.jpg"></dt>
                 <dd>
                     <div class="contenttop">
@@ -26,7 +26,7 @@
                     </div>
                     <span data-img="housedemo.jpg" data-price="100" data-name="工体三里屯超值一居室居家夜生活皆宜"></span>
                 </dd>
-            </dl>
+            </dl>-->
         </div>
 
     </div>
@@ -56,6 +56,7 @@
 </body>
 </html>
 <script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/home2.js"></script>
 <script>
     if(document.cookie.indexOf(";")){
         var userId = document.cookie.split(";")[0].split("=")[1];
@@ -64,12 +65,28 @@
     }
     $(function () {
         $.ajax({
-            url:"http://111.231.105.142:8080/House/rest/house/order/myOrder.json?userId=1",
+            url:"http://111.231.105.142:8080/House/rest/house/order/myOrder.json",
             data:`userId=${userId}`,
             type:"post",
             contentType:"application/x-www-form-urlencoded;charset=UTF-8",
             success:function(res){
                 if(res.stateCode == 0){
+                    var str = "";
+                    res.list.forEach((item,index)=>{
+                        str += `
+                                <dl>
+                                    <dt><img src="img/housedemo.jpg"></dt>
+                                    <dd>
+                                        <div class="contenttop">
+                                            ${item.houseName}</div>
+                                        <div class="contentbottom">
+                                            <p>${state(item.orderState)}</p><p class="xiangqing" data-id="${item.orderId}" data-orderstate="${item.orderState}">订单详情</p>
+                                        </div>
+                                        <span data-img="housedemo.jpg" data-price="100" data-name="工体三里屯超值一居室居家夜生活皆宜"></span>
+                                    </dd>
+                                </dl>`
+                    })
+                    $(".havecontent").append($(str))
                     console.log(res);
                 }
                 // location.href = "index.html"
@@ -77,4 +94,20 @@
 
         });
     });
+    $(".havecontent").on("click",".xiangqing",function (e) {
+        location.href = "xiangqing.html?orderId="+$(this).data("id")+"&orderState="+$(this).data("orderstate")
+        // console.log($(this).data("orderstate"))
+    })
+    function state(state) {
+        if(state==1){
+            return"未支付"
+        }else if(state == 2){
+            return"等待入住"
+        }else if(state == 3){
+            return"已取消"
+        }else if(state == 4){
+            return"已完成"
+        }
+    }
+
 </script>

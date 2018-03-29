@@ -107,7 +107,7 @@
     <span>我的房源</span>
 </div>
 <div class="list">
-    <dl>
+    <!--<dl>
         <dt><img src="img/housedemo.jpg"></dt>
         <dd>
             <div class="contenttop">
@@ -117,7 +117,7 @@
             </div>
             <span data-img="housedemo.jpg" data-price="100" data-name="工体三里屯超值一居室居家夜生活皆宜"></span>
         </dd>
-    </dl>
+    </dl>-->
 </div>
 </body>
 </html>
@@ -139,11 +139,50 @@
         type:"post",
         contentType:"application/x-www-form-urlencoded;charset=UTF-8",
         success:function(res){
+            var str = ""
             if(res.stateCode == 0){
                 console.log(res.list)
+                if(res.list.length>0){
+                    res.list.forEach((item,index)=>{
+                        str+=`<dl>
+                                <dt><img src="img/housedemo.jpg"></dt>
+                                <dd>
+                                    <div class="contenttop">
+                                        ${item.houseName}</div>
+                                    <div class="contentbottom">
+                                        <p class="del" data-id="${item.houseId}">删除房源</p><p class="change" data-id="${item.houseId}">修改房源</p>
+                                    </div>
+                                    <span data-img="housedemo.jpg" data-price="100" data-name="工体三里屯超值一居室居家夜生活皆宜"></span>
+                                </dd>
+                               </dl>`
+                    })
+                    $(".list").append($(str))
+                }
+
             }
             // location.href = "index.html"
         },
 
+    })
+    $(".list").on("click",".del",function (e) {
+        $.ajax({
+            url: "http://111.231.105.142:8080/House/rest/house/user/removeHouse.json",
+            data: "houseId=" + $(this).data("id"),
+            type: "post",
+            contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+            success: function (res) {
+                if (res.stateCode == 0) {
+                    alert("删除成功")
+                    history.go(0)
+                }else{
+                    alert("删除成功")
+                    history.go(0)
+                }
+                // location.href = "index.html"
+            }
+        })
+    })
+    $(".list").on("click",".change",function (e) {
+        location.href = "xiugaifangyuan.html?houseId="+$(this).data("id");
     })
 </script>

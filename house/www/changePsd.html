@@ -76,12 +76,15 @@
 </div>
 <p><span>原密码</span><input type="text" placeholder="输入你的原密码" class="ops"></p>
 <p><span>修改密码</span><input type="text" placeholder="6-16位字母、数字" class="nps"></p>
-<p><span>确认密码密码</span><input type="text" placeholder="请再输一次你的修改密码" class="qnps"></p>
+<p><span>确认密码</span><input type="text" placeholder="请再输一次你的修改密码" class="qnps"></p>
 <button class="btn">确认提交</button>
 </body>
 </html>
 <script src="js/jquery.min.js"></script>
 <script>
+    $(".back").click(function () {
+        history.go(-1)
+    })
     $(".btn").click(function () {
         var npsFlag = /^\w{6,16}$/;
         if($(".nps").val() !=$(".qnps").val()){

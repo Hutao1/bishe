@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布房源</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            display: block;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+
+        .header{
+            height: 9%;
+            width: 100%;
+            background-color:#000 ;
+            position: relative;
+        }
+        .back{
+            position: absolute;
+            left: 2%;
+            top:50%;
+            margin-top: -20px;
+        }
+        .header>span{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            font-size: 20px;
+            font-weight: bold;
+            color:#fff;
+        }
+        .list{
+            height:4.2%;
+            border-bottom:1px solid #666;
+            margin-top: 5%;
+            color: #bbbbbb;
+        }
+        .list>span{
+            display: inline-block;
+            width: 30%;
+            margin-left: 20px;
+        }
+        .list>input{
+            width: 50%;
+            text-align: right;
+        }
+        .list>span>img{
+            width: 25px;
+            height: 25px;
+        }
+        .upImg{
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+        .up{
+            position: relative;
+        }
+        input{
+            border: 0;
+        }
+        .btn{
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            font-size: 30px;
+            height: 60px;
+            line-height: 60px;
+            width: 100%;
+            background: orange;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+<div class="header">
+    <img src="./img/back.png" alt="" class="back">
+    <span>修改房源</span>
+</div>
+<div class="up list"><span>上传图片</span>
+    <input type="file" class="upImg" style="font-size: 0.5rem;opacity: 0">
+</div>
+<div class="list"><span>房源名称</span><input type="text" placeholder="点击输入" class="houseName"></div>
+<div class="list" ><span>房源详情</span><input type="text" placeholder="点击输入" class="houseDetail"></div>
+<div class="list"><span>地址</span><input type="text" placeholder="点击输入" class="houseAddress"></div>
+<div class="list"><span>价格(元/天)</span><input type="text" placeholder="点击输入" class="housePrice"></div>
+<div class="btn">确认修改</div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+    var houseId= location.href.split("?")[1].split("=")[1];
+    var upImg = document.querySelector(".upImg");
+    var back = document.querySelector(".back");
+    if(document.cookie.indexOf(";")){
+        var userId = document.cookie.split(";")[0].split("=")[1];
+    }else{
+        var userId = document.cookie.split("=")[1];
+    }
+    back.onclick = function () {
+        history.go(-1);
+        console.log(111)
+    }
+    $.ajax({
+        url: "http://111.231.105.142:8080/House/rest/house/reserve/houseDetails.json",
+        data: "houseId="+houseId,
+        type: "post",
+        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+        success: function (res) {
+           console.log(res)
+            $(".houseName").val(res.houseName)
+            $(".houseDetail").val(res.houseDetail)
+            $(".houseAddress").val(res.houseAddress)
+            $(".housePrice").val(res.housePrice)
+        }
+    })
+    $(".btn").click(function () {
+        $.ajax({
+            url: "http://111.231.105.142:8080/House/rest/house/user/updateHouse.json",
+            data: `houseId=${houseId}&houseName=${$(".houseName").val()}&houseDetail=${$(".houseDetail").val()}&houseAddress=${$(".houseAddress").val()}&housePrice=${$(".housePrice").val()}`,
+            type: "post",
+            contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+            success: function (res) {
+                if (res.stateCode == 0) {
+                    alert("修改成功")
+                    location.href = "home3.html"
+                }else{
+                    alert("修改失败")
+                    history.go(0)
+                }
+                // location.href = "index.html"
+            }
+        })
+    })
+</script>
