@@ -106,7 +106,7 @@
             $(this).attr("src","./img/shoucang_false.png");
             $.ajax({
                 url:"http://111.231.105.142:8080/House/rest/house/user/cancelCollect.json",
-                data:`userId=${userId}&houseId=${houseId}`,
+                data:`id=${houseId}`,
                 type:"post",
                 contentType:"application/x-www-form-urlencoded;charset=UTF-8",
                 success:function(res){
@@ -130,7 +130,7 @@
     $(".yuding").click(function () {
         var sdate = new Date($(".calendar").val()).getTime();
         var edate = new Date($(".calendar2").val()).getTime();
-        var days = edate - sdate;
+        var days = edate - sdate+1;
         var day = parseInt(days / (1000 * 60 * 60 * 24))
         $.ajax({
             url:"http://111.231.105.142:8080/House/rest/house/order/createOrder.json",
