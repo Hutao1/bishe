@@ -58,8 +58,9 @@
                     $(".endTime").html(timestampToTime(res.endTime))
                     $(".houseName").html(res.houseName)
                     $(".duration").html(res.duration+"天")
-                    $(".orderAccount").html(res.orderAccount+"/天")
+                    $(".orderAccount").html(res.orderAccount)
                     $(".orderState").html(state(res.orderState))
+                    $(".contentbottom>p").html("￥"+res.orderAccount / res.duration +"元/天" )
                 }
                 // location.href = "index.html"
             },

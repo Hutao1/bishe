@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7455c882-9c54-407a-a6cd-14c5af4aa964" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/house/www/img/true.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/house/www/queren.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/house/www/xiugaifangyuan.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/house/www/changePsd.html" afterPath="$PROJECT_DIR$/house/www/changePsd.html" />
-      <change beforePath="$PROJECT_DIR$/house/www/css/home.css" afterPath="$PROJECT_DIR$/house/www/css/home.css" />
-      <change beforePath="$PROJECT_DIR$/house/www/fangwuyuding.html" afterPath="$PROJECT_DIR$/house/www/fangwuyuding.html" />
-      <change beforePath="$PROJECT_DIR$/house/www/home2.html" afterPath="$PROJECT_DIR$/house/www/home2.html" />
-      <change beforePath="$PROJECT_DIR$/house/www/home3.html" afterPath="$PROJECT_DIR$/house/www/home3.html" />
-      <change beforePath="$PROJECT_DIR$/house/www/js/home2.js" afterPath="$PROJECT_DIR$/house/www/js/home2.js" />
-      <change beforePath="$PROJECT_DIR$/house/www/myfangyuan.html" afterPath="$PROJECT_DIR$/house/www/myfangyuan.html" />
-      <change beforePath="$PROJECT_DIR$/house/www/success.html" afterPath="$PROJECT_DIR$/house/www/success.html" />
+      <change beforePath="$PROJECT_DIR$/house/www/index.html" afterPath="$PROJECT_DIR$/house/www/index.html" />
+      <change beforePath="$PROJECT_DIR$/house/www/myziliao.html" afterPath="$PROJECT_DIR$/house/www/myziliao.html" />
+      <change beforePath="$PROJECT_DIR$/house/www/soucang.html" afterPath="$PROJECT_DIR$/house/www/soucang.html" />
       <change beforePath="$PROJECT_DIR$/house/www/xiangqing.html" afterPath="$PROJECT_DIR$/house/www/xiangqing.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,9 +23,32 @@
       <file leaf-file-name="xiangqing.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/house/www/xiangqing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+            <state relative-caret-position="502">
+              <caret line="62" column="49" lean-forward="false" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fangwuyuding.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/house/www/fangwuyuding.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="87" column="4" lean-forward="false" selection-start-line="87" selection-start-column="4" selection-end-line="121" selection-end-column="7" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#3649#4956#0" expanded="false" />
+                <marker date="1522240059189" expanded="true" signature="2279:2330" ph="..." />
+                <marker date="1522240059189" expanded="true" signature="2385:2391" ph=" " />
+                <marker date="1522240059189" expanded="true" signature="2391:2397" ph=" " />
+                <marker date="1522240059189" expanded="true" signature="2610:2616" ph=" " />
+                <marker date="1522240059189" expanded="true" signature="2616:2622" ph=" " />
+                <marker date="1522240059189" expanded="true" signature="2622:2628" ph=" " />
+                <marker date="1522240059189" expanded="true" signature="2725:2731" ph=" " />
+                <marker date="1522240059189" expanded="true" signature="2731:2737" ph=" " />
+                <marker date="1522240059189" expanded="true" signature="2737:2743" ph=" " />
+                <marker date="1522240059189" expanded="true" signature="3249:3469" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,21 +79,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xiugaifangyuan.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/house/www/xiugaifangyuan.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/house/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="131" column="180" lean-forward="false" selection-start-line="131" selection-start-column="180" selection-end-line="131" selection-end-column="180" />
-              <folding />
+            <state relative-caret-position="138">
+              <caret line="6" column="64" lean-forward="true" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+              <folding>
+                <marker date="1522486363756" expanded="true" signature="2152:2930" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myziliao.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="soucang.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/house/www/soucang.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="82" column="53" lean-forward="true" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+              <folding>
+                <marker date="1522487418352" expanded="true" signature="1556:2182" ph="..." />
+                <marker date="1522487418352" expanded="true" signature="1556:3911" ph="..." />
+                <marker date="1522487418352" expanded="true" signature="1680:2140" ph="..." />
+                <marker date="1522487418352" expanded="true" signature="1749:1821" ph="..." />
+                <marker date="1522487418352" expanded="true" signature="1893:2094" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myziliao.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/house/www/myziliao.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="90" column="35" lean-forward="true" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+            <state relative-caret-position="755">
+              <caret line="91" column="48" lean-forward="false" selection-start-line="91" selection-start-column="48" selection-end-line="91" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -140,9 +173,6 @@
         <option value="$PROJECT_DIR$/house/www/js/soucang.js" />
         <option value="$PROJECT_DIR$/house/www/css/soucang.css" />
         <option value="$PROJECT_DIR$/house/www/fabu.html" />
-        <option value="$PROJECT_DIR$/house/www/myziliao.html" />
-        <option value="$PROJECT_DIR$/house/www/soucang.html" />
-        <option value="$PROJECT_DIR$/house/www/index.html" />
         <option value="$PROJECT_DIR$/house/www/home.html" />
         <option value="$PROJECT_DIR$/house/www/register.html" />
         <option value="$PROJECT_DIR$/house/www/js/fangwuyuding.js" />
@@ -153,11 +183,14 @@
         <option value="$PROJECT_DIR$/house/www/fangwuyuding.html" />
         <option value="$PROJECT_DIR$/house/www/queren.html" />
         <option value="$PROJECT_DIR$/house/www/home2.html" />
-        <option value="$PROJECT_DIR$/house/www/xiangqing.html" />
         <option value="$PROJECT_DIR$/house/www/changePsd.html" />
         <option value="$PROJECT_DIR$/house/www/home3.html" />
         <option value="$PROJECT_DIR$/house/www/myfangyuan.html" />
         <option value="$PROJECT_DIR$/house/www/xiugaifangyuan.html" />
+        <option value="$PROJECT_DIR$/house/www/index.html" />
+        <option value="$PROJECT_DIR$/house/www/soucang.html" />
+        <option value="$PROJECT_DIR$/house/www/xiangqing.html" />
+        <option value="$PROJECT_DIR$/house/www/myziliao.html" />
       </list>
     </option>
   </component>
@@ -173,7 +206,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="104" />
     <option name="y" value="104" />
     <option name="width" value="1582" />
@@ -291,15 +324,15 @@
       <workItem from="1520336051456" duration="1202000" />
       <workItem from="1521945823742" duration="17210000" />
       <workItem from="1522237290158" duration="7634000" />
-      <workItem from="1522328107803" duration="5917000" />
+      <workItem from="1522328107803" duration="8147000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71477000" />
+    <option name="totallyTimeSpent" value="73707000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -391,7 +424,7 @@
         <state relative-caret-position="1840">
           <caret line="80" column="21" lean-forward="true" selection-start-line="78" selection-start-column="19" selection-end-line="80" selection-end-column="21" />
           <folding>
-            <marker date="1521946020148" expanded="true" signature="2148:2926" ph="{...}" />
+            <marker date="1522486363756" expanded="true" signature="2152:2930" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -549,13 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/house/www/soucang.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/house/www/index2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-345">
@@ -649,56 +675,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/house/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="57" column="60" lean-forward="false" selection-start-line="57" selection-start-column="60" selection-end-line="57" selection-end-column="60" />
-          <folding>
-            <marker date="1521946020148" expanded="true" signature="2148:2926" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/house/www/fangwuyuding.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="125" column="52" lean-forward="false" selection-start-line="125" selection-start-column="52" selection-end-line="125" selection-end-column="52" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1522240059189" expanded="true" signature="2279:2330" ph="..." />
-            <marker date="1522240059189" expanded="true" signature="2385:2391" ph=" " />
-            <marker date="1522240059189" expanded="true" signature="2391:2397" ph=" " />
-            <marker date="1522240059189" expanded="true" signature="2610:2616" ph=" " />
-            <marker date="1522240059189" expanded="true" signature="2616:2622" ph=" " />
-            <marker date="1522240059189" expanded="true" signature="2622:2628" ph=" " />
-            <marker date="1522240059189" expanded="true" signature="2725:2731" ph=" " />
-            <marker date="1522240059189" expanded="true" signature="2731:2737" ph=" " />
-            <marker date="1522240059189" expanded="true" signature="2737:2743" ph=" " />
-            <marker date="1522240059189" expanded="true" signature="3249:3469" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/house/www/js/home2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/house/www/xiangqing.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/house/www/myziliao.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="90" column="35" lean-forward="true" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -764,8 +744,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/house/www/xiugaifangyuan.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
+        <state relative-caret-position="1491">
           <caret line="131" column="180" lean-forward="false" selection-start-line="131" selection-start-column="180" selection-end-line="131" selection-end-column="180" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="64" lean-forward="true" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+          <folding>
+            <marker date="1522486363756" expanded="true" signature="2152:2930" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/www/fangwuyuding.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="87" column="4" lean-forward="false" selection-start-line="87" selection-start-column="4" selection-end-line="121" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3649#4956#0" expanded="false" />
+            <marker date="1522240059189" expanded="true" signature="2279:2330" ph="..." />
+            <marker date="1522240059189" expanded="true" signature="2385:2391" ph=" " />
+            <marker date="1522240059189" expanded="true" signature="2391:2397" ph=" " />
+            <marker date="1522240059189" expanded="true" signature="2610:2616" ph=" " />
+            <marker date="1522240059189" expanded="true" signature="2616:2622" ph=" " />
+            <marker date="1522240059189" expanded="true" signature="2622:2628" ph=" " />
+            <marker date="1522240059189" expanded="true" signature="2725:2731" ph=" " />
+            <marker date="1522240059189" expanded="true" signature="2731:2737" ph=" " />
+            <marker date="1522240059189" expanded="true" signature="2737:2743" ph=" " />
+            <marker date="1522240059189" expanded="true" signature="3249:3469" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/www/soucang.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="82" column="53" lean-forward="true" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+          <folding>
+            <marker date="1522487418352" expanded="true" signature="1556:2182" ph="..." />
+            <marker date="1522487418352" expanded="true" signature="1556:3911" ph="..." />
+            <marker date="1522487418352" expanded="true" signature="1680:2140" ph="..." />
+            <marker date="1522487418352" expanded="true" signature="1749:1821" ph="..." />
+            <marker date="1522487418352" expanded="true" signature="1893:2094" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/www/xiangqing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="62" column="49" lean-forward="false" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/www/myziliao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="755">
+          <caret line="91" column="48" lean-forward="false" selection-start-line="91" selection-start-column="48" selection-end-line="91" selection-end-column="48" />
           <folding />
         </state>
       </provider>

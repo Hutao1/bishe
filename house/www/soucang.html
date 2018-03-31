@@ -9,7 +9,7 @@
 <body>
 <div id="header"><img src="img/back.png" alt="" class="back"><span>我的收藏</span></div>
 <div class="havecontent">
-    <dl>
+   <!-- <dl>
         <dt><img src="img/housedemo.jpg"></dt>
         <dd>
             <div class="contenttop">
@@ -19,7 +19,7 @@
             </div>
             <span data-img="housedemo.jpg" data-price="100" data-name="工体三里屯超值一居室居家夜生活皆宜"></span>
         </dd>
-    </dl>
+    </dl>-->
 </div>
 </body>
 </html>
@@ -38,11 +38,61 @@
             data:"userId="+userId,
             success:function(res){
                 if(res.stateCode == 0){
-                    console.log(res.list)
+                    if(res.list.length>0){
+                        var str = ""
+                        res.list.forEach((item,index)=>{
+                            str += ` <dl>
+                                        <dt><img src="img/housedemo.jpg"></dt>
+                                        <dd>
+                                            <div class="contenttop">
+                                                ${item.houseName}</div>
+                                            <div class="contentbottom">
+                                                <p>￥${item.price}元/天</p><img src="img/shoucang_true.png" alt="" class="soucang" data-id="${item.id}">
+                                            </div>
+                                        </dd>
+                                    </dl>`
+                        })
+                        $(".havecontent").append($(str));
+                    }
                 }
                 // location.href = "index.html"
             },
 
         })
+        $(".havecontent").on("click",".soucang",function () {
+            console.log(111)
+            if(/_false/.test($(this).attr("src"))){
+                $(this).attr("src","./img/shoucang_true.png");
+                $.ajax({
+                    url:"http://111.231.105.142:8080/House/rest/house/user/saveCollect.json",
+                    data:`userId=${userId}&houseId=${$(this).data("id")}`,
+                    type:"post",
+                    contentType:"application/x-www-form-urlencoded;charset=UTF-8",
+                    success:function(res){
+                        if(res.stateCode == 0){
+                            console.log(res)
+                        }
+                        // location.href = "index.html"
+                    },
+
+                })
+            }else{
+                $(this).attr("src","./img/shoucang_false.png");
+                $.ajax({
+                    url:"http://111.231.105.142:8080/House/rest/house/user/cancelCollect.json",
+                    data:`userId=${userId}&houseId=${$(this).data("id")}`,
+                    type:"post",
+                    contentType:"application/x-www-form-urlencoded;charset=UTF-8",
+                    success:function(res){
+                        if(res.stateCode == 0){
+                            console.log(res)
+                        }
+                        // location.href = "index.html"
+                    },
+
+                })
+            }
+            console.log(/_false/.test($(this).attr("src")));
+        });
     })
 </script>

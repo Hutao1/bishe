@@ -90,7 +90,7 @@
         success:function(res){
             if(res.stateCode == 0){
                 $(".user>span:nth-child(2)").html(res.username)
-                $(".truename>span:nth-child(2)").html(res.userRealName)
+                $(".truename>span:nth-child(2)").html(res.realName)
                 $(".card>span:nth-child(2)").html(res.idcard)
                 $(".tel>span:nth-child(2)").html(res.phone)
             }
