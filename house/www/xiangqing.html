@@ -37,10 +37,16 @@
 <script>
     var Id= location.href.split("?")[1].split("&")[0].split("=")[1];
     var orderState= location.href.split("?")[1].split("&")[1].split("=")[1];
+    var houseId = "";
     console.log(orderState)
-    if(orderState == 3 || orderState == 4){
+    if(orderState == 2 || orderState == 5){
         console.log(111)
         $(".quxiao,.payment").hide();
+    }else if(orderState == 3){
+        $(".payment").html("完成入住")
+    }else if(orderState == 4){
+        $(".quxiao").hide();
+        $(".payment").html("去评价").css('width',"100%")
     }
     $(function () {
         $.ajax({
@@ -61,6 +67,7 @@
                     $(".orderAccount").html(res.orderAccount)
                     $(".orderState").html(state(res.orderState))
                     $(".contentbottom>p").html("￥"+res.orderAccount / res.duration +"元/天" )
+                    houseId = res.houseId
                 }
                 // location.href = "index.html"
             },
@@ -69,8 +76,8 @@
     });
     $(".quxiao").click(function () {
         $.ajax({
-            url:"http://111.231.105.142:8080/House/rest/house/order/updateState.json",
-            data:`orderId=${Id}&orderState=3`,
+            url:"http://111.231.105.142:8080/House/rest/house/order/cancelOrder.json",
+            data:`orderId=${Id}`,
             type:"post",
             contentType:"application/x-www-form-urlencoded;charset=UTF-8",
             success:function(res){
@@ -87,7 +94,7 @@
         if(orderState == 1){
             location.href = `queren.html?orderId=${Id}&price=${parseInt($(".orderAccount").html())}`
         }else if(orderState == 2){
-            $.ajax({
+            /*$.ajax({
                 url:"http://111.231.105.142:8080/House/rest/house/order/updateState.json",
                 data:`orderId=${Id}&orderState=5`,
                 type:"post",
@@ -100,7 +107,24 @@
                     // location.href = "index.html"
                 },
 
+            });*/
+        }else if(orderState == 3 ){
+            $.ajax({
+                url:"http://111.231.105.142:8080/House/rest/house/order/completeOrder.json",
+                data:`orderId=${Id}`,
+                type:"post",
+                contentType:"application/x-www-form-urlencoded;charset=UTF-8",
+                success:function(res){
+                    if(res.stateCode == 0){
+                        alert("入住成功");
+                        location.href = `home2.html`
+                    }
+                    // location.href = "index.html"
+                },
+
             });
+        }else if(orderState == 4 ){
+            location.href = `pingjia.html?orderId=${Id}&houseId=${houseId}`
         }
     })
     function timestampToTime(timestamp) {
@@ -116,14 +140,15 @@
     });
     function state(state) {
         if(state==1){
-            return"未支付"
+            return"等待支付"
         }else if(state == 2){
-            return"等待入住"
-        }else if(state == 3){
             return"已取消"
+        }else if(state == 3){
+            return"待确定"
         }else if(state == 4){
+            return"待评价"
+        }else if(state == 5){
             return"已完成"
         }
-
     }
 </script>

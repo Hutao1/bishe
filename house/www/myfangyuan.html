@@ -150,7 +150,7 @@
                                     <div class="contenttop">
                                         ${item.houseName}</div>
                                     <div class="contentbottom">
-                                        <p class="del" data-id="${item.houseId}">删除房源</p><p class="change" data-id="${item.houseId}">修改房源</p>
+                                        <p class="del" data-id="${item.id}">删除房源</p><p class="change" data-id="${item.houseId}">修改房源</p>
                                     </div>
                                     <span data-img="housedemo.jpg" data-price="100" data-name="工体三里屯超值一居室居家夜生活皆宜"></span>
                                 </dd>
@@ -167,7 +167,7 @@
     $(".list").on("click",".del",function (e) {
         $.ajax({
             url: "http://111.231.105.142:8080/House/rest/house/user/removeHouse.json",
-            data: "houseId=" + $(this).data("id"),
+            data: "id=" + $(this).data("id"),
             type: "post",
             contentType: "application/x-www-form-urlencoded;charset=UTF-8",
             success: function (res) {
@@ -175,8 +175,8 @@
                     alert("删除成功")
                     history.go(0)
                 }else{
-                    alert("删除成功")
-                    history.go(0)
+                    alert("删除失败")
+                    // history.go(0)
                 }
                 // location.href = "index.html"
             }

@@ -100,12 +100,14 @@
     })
     function state(state) {
         if(state==1){
-            return"未支付"
+            return"等待支付"
         }else if(state == 2){
-            return"等待入住"
-        }else if(state == 3){
             return"已取消"
+        }else if(state == 3){
+            return"待确定"
         }else if(state == 4){
+            return"待评价"
+        }else if(state == 5){
             return"已完成"
         }
     }

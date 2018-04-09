@@ -106,7 +106,7 @@
             $(this).attr("src","./img/shoucang_false.png");
             $.ajax({
                 url:"http://111.231.105.142:8080/House/rest/house/user/cancelCollect.json",
-                data:`id=${houseId}`,
+                data:`userId=${userId}&houseId=${houseId}`,
                 type:"post",
                 contentType:"application/x-www-form-urlencoded;charset=UTF-8",
                 success:function(res){

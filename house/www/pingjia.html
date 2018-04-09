@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="js/jquery.min.js"></script>
+    <title>评价</title>
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            -ms-touch-action: none;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        body, ul, li {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+
+        img {
+            display: block;
+        }
+
+        body {
+            font-size: 12px;
+            font-family: ubuntu, helvetica, arial;
+            overflow: hidden; /* this is important to prevent the whole page to bounce */
+        }
+
+        #header {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 9vh;
+            line-height: 9vh;
+            background: #000;
+            padding: 0;
+            color: #fff;
+            font-size: 3vh;
+            text-align: center;
+            font-weight: bold;
+        }
+        .back{
+            position: absolute;
+            left: 2%;
+            top:50%;
+            margin-top: -20px;
+        }
+    </style>
+</head>
+<body>
+<div id="header"><img src="img/back.png" alt="" class="back"><span>订单详情</span></div>
+<textarea name="" id="content" cols="30" rows="15" style="width: 90%; margin: 0 auto;display: block;margin-top:11vh">
+
+</textarea>
+<div style="width: 90%;background: red;height: 7vh;margin: 0 auto;color: #fff;font-size: 28px;line-height: 7vh;text-align: center;margin-top: 10px" class="btn">评价</div>
+</body>
+</html>
+<script>
+    if(document.cookie.indexOf(";")){
+        var userId = document.cookie.split(";")[0].split("=")[1];
+    }else{
+        var userId = document.cookie.split("=")[1];
+    }
+    var houseId = location.href.split("?")[1].split("&")[1].split("=")[1]
+    var orderId = location.href.split("?")[1].split("&")[0].split("=")[1]
+$(".btn").click(function () {
+    $.ajax({
+        url:"http://111.231.105.142:8080/House/rest/house/order/commentHouse.json",
+        data:`orderId=${orderId}&userId=${userId}&houseId=${houseId}&content=${$("#content").val()}`,
+        type:"post",
+        contentType:"application/x-www-form-urlencoded;charset=UTF-8",
+        success:function(res){
+            if(res.stateCode == 0){
+                alert("评价成功");
+                location.href = "home2.html"
+            }
+            // location.href = "index.html"
+        },
+
+    });
+})
+    $(".back").click(function () {
+        history.go(-1)
+    })
+</script>

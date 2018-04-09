@@ -44,10 +44,10 @@
                             str += ` <dl>
                                         <dt><img src="img/housedemo.jpg"></dt>
                                         <dd>
-                                            <div class="contenttop" data-id="${item.id}">
+                                            <div class="contenttop" data-houseid="${item.houseId}">
                                                 ${item.houseName}</div>
                                             <div class="contentbottom">
-                                                <p>￥${item.price}元/天</p><img src="img/shoucang_true.png" alt="" class="soucang" data-id="${item.id}">
+                                                <p>￥${item.price}元/天</p><img src="img/shoucang_true.png" alt="" class="soucang" data-houseid="${item.houseId}">
                                             </div>
                                         </dd>
                                     </dl>`
@@ -60,7 +60,7 @@
 
         })
         $(".havecontent").on('click','.contenttop',function () {
-            location.href = "fangwuyuding.html?hosueId="+$(this).data("id")
+            location.href = "fangwuyuding.html?houseId="+$(this).data("houseid")
         })
         $(".havecontent").on("click",".soucang",function () {
             console.log(111)
@@ -68,7 +68,7 @@
                 $(this).attr("src","./img/shoucang_true.png");
                 $.ajax({
                     url:"http://111.231.105.142:8080/House/rest/house/user/saveCollect.json",
-                    data:`userId=${userId}&houseId=${$(this).data("id")}`,
+                    data:`userId=${userId}&houseId=${$(this).data("houseid")}`,
                     type:"post",
                     contentType:"application/x-www-form-urlencoded;charset=UTF-8",
                     success:function(res){
@@ -83,7 +83,7 @@
                 $(this).attr("src","./img/shoucang_false.png");
                 $.ajax({
                     url:"http://111.231.105.142:8080/House/rest/house/user/cancelCollect.json",
-                    data:`id=${$(this).data("id")}`,
+                    data:`userId=${userId}&houseId=${$(this).data("houseid")}`,
                     type:"post",
                     contentType:"application/x-www-form-urlencoded;charset=UTF-8",
                     success:function(res){
